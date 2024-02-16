@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+## Host URL: https://65cf01df5da8fe851b3b8b0a--dainty-pothos-7ff0e6.netlify.app/login
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Chat App using MERN Stack
 
-## Available Scripts
+## Frontend Setup
 
-In the project directory, you can run:
+1. Clone the frontend repository:
 
-### `npm start`
+    ```bash
+    git clone https://github.com/Mayureshju/chat-app/tree/main/public
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Install node modules:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    ```bash
+    cd public
+    npm install
+    ```
 
-### `npm test`
+3. Create a `.env` file in the `public` directory and add the following:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```env
+    REACT_APP_LOCALHOST_KEY="chat-app-current-user"
+    ```
 
-### `npm run build`
+4. Update the API URL in your frontend code to point to the backend host.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Backend Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the backend repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/Mayureshju/chat-app/tree/main/server
+    ```
 
-### `npm run eject`
+2. Install node modules:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    cd server
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Create a `.env` file in the `server` directory and add the following:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```env
+    PORT=your_chosen_port
+    MONGO_URL=your_mongodb_url
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Update the frontend API configuration to connect to the correct backend host.
 
-## Learn More
+## Running the Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Start the backend server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    cd server
+    npm start
+    ```
 
-### Code Splitting
+2. Start the frontend application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    ```bash
+    cd public
+    npm start
+    ```
 
-### Analyzing the Bundle Size
+3. Open your browser and navigate to `http://localhost:3000` (or your chosen port) to use the chat app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Notes
 
-### Making a Progressive Web App
+- Ensure MongoDB is running and the connection URL is correctly set in the `.env` file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Feel free to customize this README further based on additional details or requirements for your specific application.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
